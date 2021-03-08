@@ -1,0 +1,64 @@
+---
+title: 'Lab 06: Simulation-based inference'
+author: ''
+date: ''
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+editor_options:
+  chunk_output_type: console
+subtitle: 'Due: Sat, Mar 13 at 11:59pm ET'
+---
+
+```{r set_up, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      comment = "#>", highlight = TRUE,
+                      fig.align = "center")
+set.seed(352790)
+```
+
+# Packages
+
+```{r load_packages}
+library(tidyverse)
+library(infer)
+``` 
+
+# Data
+
+In this lab, you'll work with a couple of datasets.
+
+The `ToothGrowth` dataset can be loaded into R with `data("ToothGrowth)`. It
+contains data on the length of odontoblasts (cells responsible for tooth growth) 
+in 60 guinea pigs. Each animal received one of three dose levels of vitamin C 
+(0.5, 1, and 2 mg/day) by one of two delivery methods, orange juice (`OJ`) or 
+ascorbic acid (`VC`) (a form of vitamin C and coded as VC). For the purposes of 
+this lab, we will ignore the `dose` variable.
+
+```{r load_tooth_data}
+data("ToothGrowth")
+```
+
+The second dataset is a subset of `gss_cat` from the `forcats` package. It
+contains categorical variables from the General Social Survey in 2014.
+
+```{r load_gss_data, echo=TRUE}
+gss_2014 <- gss_cat %>% 
+  filter(year == 2014)
+```
+
+# Exercises
+
+## Exercise 1
+
+```{r ex_1}
+```
+
+
+
+
+
+# References
+
+"Infer - Tidy Statistical Inference". Infer.Netlify.App, 2021, https://infer.netlify.app/index.html.
